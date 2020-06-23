@@ -6,7 +6,15 @@ function receiveMessage(event) {
     say(event.data.arg);
   }
 }
-  
+
+function sayToParent(txt){
+    try{
+        parent.say(txt);
+    }
+    catch(e){
+        say(`sayToParent() error: ${e}`);
+    }
+}
 function say(txt) {
-  document.body.insertAdjacentHTML("beforeend", `${txt}<br>`);
+    document.body.insertAdjacentHTML("beforeend", `${txt}<br>`);
 }
