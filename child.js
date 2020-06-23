@@ -17,3 +17,5 @@ function sayToParent(txt){
 function say(txt) {
   document.body.insertAdjacentHTML("beforeend", `${txt}<br>`);
 }
+
+window.addEventListener("message", receiveMessage, false);
